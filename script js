@@ -1,0 +1,37 @@
+//Plant growth data in simple English
+const plantdata={
+    Aloe:{
+     Title: "Aloe Vera growth process.",
+     Seed: "A small Aloe Vera seed or pup is planted in well -drained soil. It needs very little water to start.",
+     Sprout: "In a few weeks, small roots develop, and a tiny green leaf appears above the soil.",
+     Growing: "The plant grows slowly, and its leaves become thick and fleshy as they fill with alone gel.",
+     Flower: "When fully mature, a tall and stalk grows from the center, producing beautiful yellow or orange flower.",
+    },
+    Tulip: {
+        Title: "  Tulip growth process",
+        Seed: "A tulip bulb (not a seed) is planted deep in the ground during autumn season before winter. ",
+        Sprout: "When spring arrives, a sharp green shoot breaks through the soil and grows towards the sunlight.",
+        Growing: "The stem grow taller and large green leaves unfold. Asmall flower bud forms at the top of the stem.",
+        Flower: "The bud opens up completely into a beautiful, colorful cup shaped tulip flower.",
+    },
+    Rose: {
+        Title: "Rose growth process.",
+        Seed: "A rose is usauly planted using a seed or a stem cutting placed directlyinto fertile soil.",
+        sprout: "After a few days ,new red and green tiny leaves and smallbranches start to grow from the stem.",
+        Growing: "The plant grow into a bigger bush, the stem becomes strong with sharp thorns, and more leaves appear.",
+        Flower: "Beautiful flower buds develop at the ends of branches and soon open into fragrant rose flowers.",
+    }
+};
+// Function to change data when a bitton is clicked
+function showPlant (PlantName) {
+    //Show hidden growth section ko screen par show krne ke liye
+const section = document.getElementById('growthsection');
+section.classList.remove('hidden');
+//Selected plant (aloe ya tulip )ka data nikalne ke liye
+const plant = plantData[plantName];
+//ap ki images ke mutabiq exact IDs aur correct innerText syntax
+document.getElementById('plant-title').innerText = plant.title;
+document.getElementById('sep-seed').innerText = plant.title;
+document.getElementById('sep-sprout').innerText = plant.sprout;
+document.getElementById('sep-growing').innerText = plant.growing;
+}
